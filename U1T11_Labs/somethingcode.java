@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class somethingcode {
    public static void main(String[] args) {
        Scanner scanner = new Scanner(System.in);
-
+        // Lab 1 - String Methods
 
        // 1. Ask the user to enter two words
        System.out.print("Enter the first word: ");
