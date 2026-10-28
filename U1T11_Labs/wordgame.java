@@ -15,6 +15,7 @@ public class wordgame {
         String nextwrd = tsword;
         current++;
         int len1;
+        int len2;
 
         while (score < 50) {
             System.out.println(player1 + ", your current score is: " + score);
@@ -34,13 +35,20 @@ public class wordgame {
             }
 
             len1 = tsword.length();
+            len2 = nextwrd.length();
             if (len1-2 < 0) {
                 len1 = 0;
             } else {
                 len1 -= 2;
             }
 
-            if (tsword.substring(len1).equals(nextwrd.substring(0,1))){
+            if (len2-2 < 0) {
+                len2 = 1;
+            } else {
+                len2 = 2;
+            }
+
+            if (tsword.substring(len1).equals(nextwrd.substring(0,len2))){
                 System.out.println("The last two letters of " + tsword + " are the same as the first two letters of " + nextwrd + "! (+5 points)");
                 score+=5;
             } else {
